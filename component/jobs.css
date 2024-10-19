@@ -1,0 +1,102 @@
+.jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .jobs {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .job-div {
+    padding: 1.5rem;
+  }
+
+  .jobs-button {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .job-div {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .jobs-button {
+    padding: 0.4rem 0.7rem;
+  }
+}
+
+.job-div {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+}
+
+.jobs-box {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.jobs-box:hover {
+  transform: scale(1.1);
+  color: red;
+  background-color: #45a049;
+}
+
+.jobs-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.jobs-button:hover {
+  background-color: #45a049;
+  color: red;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  text-align: center;
+}

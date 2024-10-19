@@ -1,0 +1,118 @@
+.active {
+  background-color: #4caf50;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 1rem;
+  z-index: 1000; /* Ensures the navbar is always on top */
+}
+
+nav .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  margin-left: 6rem;
+  text-decoration: none;
+  color: black;
+}
+nav .title:hover {
+  color: red;
+}
+
+nav .title .logo {
+  max-height: 40px;
+  margin-right: 0.5rem;
+  max-width: 80px;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:not(.active):hover {
+  background-color: #eee;
+  color: red;
+  font-weight: 500; /* Ensures text color remains white on hover */
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+nav .menu span {
+  height: 0.25rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+nav .menu:hover span {
+  background-color: rgb(236, 25, 25);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #60ca63;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    margin: 0.2rem 0;
+    padding: 1rem;
+  }
+}

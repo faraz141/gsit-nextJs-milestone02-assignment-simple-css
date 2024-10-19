@@ -1,0 +1,81 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* Responsive for tablets and smaller devices */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .home-section {
+    height: auto; /* Allow sections to adapt to content size */
+    padding: 1.5rem;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .home-section {
+    height: auto;
+    padding: 1rem;
+    border-radius: 20px; /* Adjust border radius for smaller screens */
+  }
+
+  .home-section .button {
+    padding: 0.4rem 0.8rem; /* Reduce padding for buttons */
+  }
+}
+
+.home-section {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  transition: 0.6s;
+}
+.home-section:hover {
+  transform: scale(0.9);
+}
+
+.home-section h2 {
+  margin-bottom: 10px;
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.home-section .button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.home-section .button:hover {
+  background-color: #45a049;
+  color: red;
+  transform: scale(1.1);
+}
