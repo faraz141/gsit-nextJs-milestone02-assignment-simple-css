@@ -36,7 +36,7 @@ const home = () => {
         {' '}
         <h2>Contact Us</h2>
         <p>Have any questions? Feel free to get in touch with us.</p>
-        <Link href="contact.html" className="button">
+        <Link href="/Contact" className="button">
           Contact Us
         </Link>
       </div>
